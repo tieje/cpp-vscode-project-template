@@ -11,7 +11,10 @@
                 "-std=c++20",
                 "-pedantic-errors",
                 "-Werror",
-                "${file}",
+                // Compile a single file
+                //"${file}",
+                // Compile all cpp files in main
+                "${fileDirname}/**.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
